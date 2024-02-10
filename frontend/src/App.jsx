@@ -1,8 +1,7 @@
 import './App.css';
 import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./layout/Layout";
-import Home from "./pages/Home"; 
-
+import Home from "./pages/Home";
 
 export default function App() {
   return (
@@ -13,9 +12,9 @@ export default function App() {
     <UserProvider>
     <OrderProvider>
       <Routes>
-        <Route path="/" element={<Layout />}>
-        <Route index element={<Navigate to="/home" />} />
-        <Route path="home" element={<Home />}/>
+        <Route path="/" element={<Layout />}>        
+          <Route index element={<Navigate to="/home" />} />
+          <Route path="home" element={<Home />}/>
         </Route>
       </Routes>
     </OrderProvider>
