@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Footer(){
   return(
     <footer className="bg-[#05204A] text-white font-semibold p-4 py-10">

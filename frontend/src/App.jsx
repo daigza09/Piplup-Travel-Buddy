@@ -1,11 +1,20 @@
-import './App.css';
-import { useState } from 'react';
+import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import './App.css';
 
-export default function App() {
+function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Home Page
-    </h1>
+    <>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to="/home" />} />
+        <Route path="home" element={<Home />}/>
+        <Route path="Search" element={<Search />}/>
+      </Route>
+    </Routes>
+    </>
   )
 }
+export default App
