@@ -1,5 +1,5 @@
-import homeBG from "../assets/homeBG";
 import { Link } from "react-router-dom";
+import homeBG from "../assets/homeBG.jpg";
 
 function Home(){
     return (
