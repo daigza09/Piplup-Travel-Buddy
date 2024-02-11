@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Account from "./pages/Account";
 import CreateAccount from "./pages/CreateAccount";
 import LiveChat from "./pages/LiveChat";
-import UserInformation from "./pages/UserInformation";
+import Contact from "./pages/Contact";
 import "./App.css";
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="CreateAccount" element={<CreateAccount />} />
           <Route path="about" element={<About />} />
           <Route path="LiveChat" element={<LiveChat />} />
-          <Route path="UserInformation" element={<UserInformation />} />
+          <Route path="Contact" element={<Contact/>}/>
         </Route>
       </Routes>
     </>
