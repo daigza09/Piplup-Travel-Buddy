@@ -9,39 +9,48 @@ function About(){
     <main className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-200 to-gray-300">
       <div>
       <div className="flex items-center justify-between p-4 ">
-        <div className="flex justify-between">
-          <section className="container mx-auto">
-            <h1 className="text-5xl text-bold">Who we are</h1>
-            <p className="text-base mt-8">At Piplup Luvers, we are committed to providing 
-            safe, reliable, and comfortable air travel experiences for our passengers. 
-            Our mission is to connect people, places, and cultures through seamless 
-            and enjoyable flights.</p>
-          </section>
+                  <div className="flex justify-between">
+                  <section className="container mx-auto">
+                    <h1 className="text-5xl font-bold">Who we are</h1>
+                    <p className="text-base mt-8">
+                      At Piplup Luvers, we are committed to providing safe, reliable, and comfortable air travel experiences for our passengers.
+                    </p>
+                    <p className="text-base">
+                      Our mission is to connect people, places, and cultures through seamless and enjoyable flights.
+                    </p>
+                  </section>
+
+                  </div>
         </div>
-      </div>
-      <div className="flex">
-        <section className="container mx-auto mt-8 p-8 bg-[#ffffff] border border-black rounded-2xl">
-          <h1 className="text-5xl mx-auto mb-8 font-bold text-blue-500 text-center">Recommended Flight Locations</h1>
-          <div className="flex mx-auto justify-center">
-            <div className="text-center mr-4">
-              <img className="border border-black rounded-md mb-4 object-cover" src={AustinTX} style={{ width: '400px', height: '300px' }} alt="Austin, TX" />
-              <p className="font-bold border border-black  rounded-md">Austin, TX</p>
-              
-            </div>
-            <div className="text-center mr-4">
-              <img className="border border-black rounded-md mb-4 object-cover" src={laCali} style={{ width: '400px', height: '300px' }} alt="Los Angeles, CA" />
-              <p className="font-bold border border-black rounded-md">Los Angeles, CA</p>
-            </div>
-            <div className="text-center mr-4">
-              <img className="border border-black rounded-md mb-4 object-cover" src={washington} style={{ width: '400px', height: '300px' }} alt="Washington, DC" />
-              <p className="font-bold border border-black rounded-md">Washington, DC</p>
-            </div>
-          </div>
+                <div className="flex">
+                <section className="container mx-auto mt-8 p-8 bg-[#ffffff] border border-black border-4 rounded-2xl">
+                    <h1 className="text-5xl mx-auto mb-8 font-bold text-blue-500 text-center">Recommended Flight Locations</h1>
+                    <div className="flex mx-auto justify-between">
+  <div className="text-center mr-10">
+    <img className="border border-black border-4 rounded-md mb-4 object-cover" src={AustinTX} style={{ width: '400px', height: '300px' }} alt="Austin, TX" />
+    <div>
+      <p className="font-bold border border-black rounded-md mb-2">Austin, TX</p>
+    </div>
+  </div>
+  <div className="text-center mr-10">
+    <img className="border border-black border-4 rounded-md mb-4 object-cover" src={laCali} style={{ width: '400px', height: '300px' }} alt="Los Angeles, CA" />
+    <div>
+      <p className="font-bold border border-black rounded-md mb-2">Los Angeles, CA</p>
+    </div>
+  </div>
+  <div className="text-center mr-10">
+    <img className="border border-black border-4 rounded-md mb-4 object-cover" src={washington} style={{ width: '400px', height: '300px' }} alt="Washington, DC" />
+    <div>
+      <p className="font-bold border border-black rounded-md mb-2">Washington, DC</p>
+    </div>
+  </div>
+</div>
+
         </section>
       </div>
       <div className="flex items-center justify-between ">
         <section className="container mx-auto mb-16">
-          <h1 className="text-5xl text-bold mt-16">Team Behind the Code</h1>
+          <h1 className="text-5xl font-bold mt-16">Team Behind the Code</h1>
           <p className="text-base mr-16 mt-8">A dedicated team of coders consisting of 
           Daisy, Lisa, Reem, and Colin. All of us are computer science majors</p>
         </section>
