@@ -23,27 +23,7 @@ function LiveChat() {
     setUserInput("");
   };
 
-  // Parsing script function
   /*function parseFlightRequest(requestString) {
-    const departureCityRegex = /from\s+([^\s]+)\s+to/i;
-    const arrivalCityRegex = /to\s+([^\s]+(?:\s+[^\s]+)?)\s/i;
-    const departureDateRegex = /leaves\s+of\s+([^\s].*)/i;
-
-    const departureCityMatch = requestString.match(departureCityRegex);
-    const arrivalCityMatch = requestString.match(arrivalCityRegex);
-    const departureDateMatch = requestString.match(departureDateRegex);
-
-    const departureCity = departureCityMatch ? checkCity(departureCityMatch[1]) : null;
-    const arrivalCity = arrivalCityMatch ? checkCity(arrivalCityMatch[1]) : null;
-    const departureDate = departureDateMatch ? formatMonthDay(departureDateMatch[1]) : null;
-
-    return {
-      departureCity,
-      arrivalCity,
-      departureDate,
-    };
-  }*/
-  function parseFlightRequest(requestString) {
     const departureCityRegex = /from\s+([^\s]+)\s+to/i;
     const arrivalCityRegex = /to\s+([^\s]+(?:\s+[^\s]+)?)\s/i;
     const departureDateRegex = /leaves\s+on\s+(\S+\s+\d+)/i;
@@ -67,9 +47,9 @@ function LiveChat() {
       arrivalCity,
       departureDate,
     };
-  }
+}
 
-
+  
   function checkCity(city) {
     const formattedCity = city.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
     return usCities.includes(formattedCity) ? formattedCity : null;
@@ -77,13 +57,56 @@ function LiveChat() {
   function formatMonthDay(dateString) {
     const [month, day] = dateString.split(' ');
     return `${month} ${day}`;
-  }
+  }*/
+  function parseFlightRequest(requestString) {
+    const departureCityRegex = /from\s+([^\s]+)\s+to/i;
+    const arrivalCityRegex = /to\s+([^\s]+(?:\s+[^\s]+)?)\s/i;
+    const departureDateRegex = /on\s+(\S+\s+\d+)/i;
 
+    const departureCityMatch = requestString.match(departureCityRegex);
+    const arrivalCityMatch = requestString.match(arrivalCityRegex);
+    const departureDateMatch = requestString.match(departureDateRegex);
+
+    console.log("Departure City Match:", departureCityMatch);
+    console.log("Arrival City Match:", arrivalCityMatch);
+    console.log("Departure Date Match:", departureDateMatch);
+
+    const departureCity = departureCityMatch ? checkCity(departureCityMatch[1]) : null;
+    const arrivalCity = arrivalCityMatch ? checkCity(arrivalCityMatch[1]) : null;
+    const departureDate = departureDateMatch ? formatYearMonthDay(departureDateMatch[1]) : null;
+
+    console.log("Parsed Information:", { departureCity, arrivalCity, departureDate });
+
+    return {
+      departureCity,
+      arrivalCity,
+      departureDate,
+    };
+}
+
+function checkCity(city) {
+    const formattedCity = city.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    return usCities.includes(formattedCity) ? formattedCity : null;
+}
+
+function formatYearMonthDay(dateString) {
+    const [month, day] = dateString.split(' ');
+    const year = new Date().getFullYear(); // You can customize the year as needed
+    const monthIndex = getMonthIndex(month);
+    const formattedMonth = monthIndex !== -1 ? (monthIndex + 1).toString().padStart(2, '0') : null;
+
+    return formattedMonth ? `${year}/${formattedMonth}/${day}` : null;
+}
+
+function getMonthIndex(month) {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    return months.findIndex(m => m.toLowerCase() === month.toLowerCase());
+}
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-200 to-gray-300">
       <div className="container mx-auto bg-white rounded-md shadow-lg p-10 w-full" style={{ width: '100%', height: 'auto' }}>
         <h2 className="text-2xl font-semibold text-blue-500 mb-2">Hello, I am the piplup chatbox! </h2>
-        <h2 className="text-2xl font-semibold text-blue-500 mb-2">Please let me know your travel destination, your departing destination, time and date of your flights. </h2>
+        <h2 className="text-2xl font-semibold text-blue-500 mb-2">Please let me know your travel destination, your departing destination, departure date.</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="userInput" className="block text-sm font-medium text-gray-700">Chatbox</label>

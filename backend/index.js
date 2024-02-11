@@ -1,5 +1,6 @@
 // Import required modules
-const express = require('express');
+const express = require("express");
+const Amadeus = require('amadeus');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -11,10 +12,57 @@ dotenv.config();
 // Create an instance of the Express application
 const app = express();
 
+const amadeus = new Amadeus({
+    clientId: process.env.API_KEY,
+    clientSecret: process.env.API_SECRET,
+  });
+  //const port = 3000; we already port is 8080??
+
+
+
 // Middleware
+app.use(express.static("public"));
+
 app.use(express.json()); // Parse JSON bodies
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 // Add any additional middleware as needed
+
+//calling the API for suggestions input
+app.get("/api/autocomplete", async (request, response) => {
+    try {
+      const { query } = request;
+      const { data } = await amadeus.referenceData.locations.get({
+        keyword: query.keyword,
+        subType: Amadeus.location.city,
+      });
+      response.json(data);
+    } catch (error) {
+      console.error(error.response);
+      response.json([]);
+    }
+  });
+
+//calling the API to recieve the cheapest flights available 
+app.get("/api/search", async (request, response) => {
+    try {
+      const { query } = request;
+      const { data } = await amadeus.shopping.flightOffersSearch.get({
+        originLocationCode: query.origin,
+        destinationLocationCode: query.destination,
+        departureDate: query.departureDate,
+        adults: query.adults,
+        children: query.children,
+        infants: query.infants,
+        travelClass: query.travelClass,
+        ...(query.returnDate ? { returnDate: query.returnDate } : {}),
+      });
+      response.json(data);
+    } catch (error) {
+      console.error(error.response);
+      response.json([]);
+    }
+  });
+
 
 // Connect to MongoDB database
 mongoose.connect(process.env.MONGO_URI, {
