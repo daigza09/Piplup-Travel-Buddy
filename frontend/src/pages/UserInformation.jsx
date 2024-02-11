@@ -30,8 +30,8 @@ function UserInformation() {
       style={{ backgroundImage: `url(${destinationBG})` }}
     >
       <div
-        className="mx-auto bg-white rounded-md shadow-lg p-12 h-30 max-w-md w-full md:w-2/3 lg:w-1/2"
-        style={{ width: "150%", height: "60%" }}
+        className="mx-auto bg-white rounded-md shadow-lg p-12 h-40 max-w-md w-full md:w-2/3 lg:w-1/2"
+        style={{ width: "150%", height: "75%" }}
       >
         <h2 className="text-2xl font-bold text-blue-500 mb-4">
           Profile Management
