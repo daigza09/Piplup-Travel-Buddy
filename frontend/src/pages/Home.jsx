@@ -15,9 +15,11 @@ function Home() {
         <div className="text-2xl text-[#ffffff] mb-2">
           We are dedicated to curating economical flight planners!
         </div>
-        <button className="m-2 px-6 py-4 bg-[#000080] text-white rounded hover.bg-[#000080]">
-          Learn More --
-        </button>
+        <Link to = "/Services">
+          <button className="m-2 px-6 py-4 bg-[#000080] text-white rounded hover.bg-[#000080]">
+            Learn More --
+          </button>
+        </Link>
       </div>
     </main>
   );
