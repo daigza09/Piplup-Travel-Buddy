@@ -110,4 +110,4 @@ function UserInfo() {
   );
 }
 
-export default UserInfo;
+export default UserInformation;

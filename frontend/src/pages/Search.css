@@ -6,9 +6,7 @@
     justify-content: space-between; /* Add space between the input boxes */
     gap: 10px;
     font-family: 'Montserrat', sans-serif;
-
 }
-
 input {
     flex: 1;
     margin-right: 5px;
