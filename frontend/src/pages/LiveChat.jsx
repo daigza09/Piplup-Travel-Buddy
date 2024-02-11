@@ -24,10 +24,10 @@ function LiveChat() {
   };
 
   // Parsing script function
-  function parseFlightRequest(requestString) {
+  /*function parseFlightRequest(requestString) {
     const departureCityRegex = /from\s+([^\s]+)\s+to/i;
     const arrivalCityRegex = /to\s+([^\s]+(?:\s+[^\s]+)?)\s/i;
-    const departureDateRegex = /leaves\s+of\s+([^\s]+)/i;
+    const departureDateRegex = /leaves\s+of\s+([^\s].*)/i;
 
     const departureCityMatch = requestString.match(departureCityRegex);
     const arrivalCityMatch = requestString.match(arrivalCityRegex);
@@ -35,7 +35,32 @@ function LiveChat() {
 
     const departureCity = departureCityMatch ? checkCity(departureCityMatch[1]) : null;
     const arrivalCity = arrivalCityMatch ? checkCity(arrivalCityMatch[1]) : null;
-    const departureDate = departureDateMatch ? departureDateMatch[1] : null;
+    const departureDate = departureDateMatch ? formatMonthDay(departureDateMatch[1]) : null;
+
+    return {
+      departureCity,
+      arrivalCity,
+      departureDate,
+    };
+  }*/
+  function parseFlightRequest(requestString) {
+    const departureCityRegex = /from\s+([^\s]+)\s+to/i;
+    const arrivalCityRegex = /to\s+([^\s]+(?:\s+[^\s]+)?)\s/i;
+    const departureDateRegex = /leaves\s+on\s+(\S+\s+\d+)/i;
+
+    const departureCityMatch = requestString.match(departureCityRegex);
+    const arrivalCityMatch = requestString.match(arrivalCityRegex);
+    const departureDateMatch = requestString.match(departureDateRegex);
+
+    console.log("Departure City Match:", departureCityMatch);
+    console.log("Arrival City Match:", arrivalCityMatch);
+    console.log("Departure Date Match:", departureDateMatch);
+
+    const departureCity = departureCityMatch ? checkCity(departureCityMatch[1]) : null;
+    const arrivalCity = arrivalCityMatch ? checkCity(arrivalCityMatch[1]) : null;
+    const departureDate = departureDateMatch ? formatMonthDay(departureDateMatch[1]) : null;
+
+    console.log("Parsed Information:", { departureCity, arrivalCity, departureDate });
 
     return {
       departureCity,
@@ -44,9 +69,14 @@ function LiveChat() {
     };
   }
 
+
   function checkCity(city) {
     const formattedCity = city.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
     return usCities.includes(formattedCity) ? formattedCity : null;
+  }
+  function formatMonthDay(dateString) {
+    const [month, day] = dateString.split(' ');
+    return `${month} ${day}`;
   }
 
   return (
@@ -76,6 +106,7 @@ function LiveChat() {
           <Link to="/Search" className="text-blue-500 hover:underline ml-1">Search</Link>
         </div>
         <div className="mt-4">
+          {/* Display the extracted information */}
           <p>Departure City: {departureCity}</p>
           <p>Arrival City: {arrivalCity}</p>
           <p>Departure Date: {departureDate}</p>
