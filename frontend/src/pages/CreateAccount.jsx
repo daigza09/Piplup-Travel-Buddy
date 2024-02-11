@@ -4,6 +4,9 @@ function CreateAccount() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,7 +23,10 @@ function CreateAccount() {
                 },
                 body: JSON.stringify({
                     email,
-                    password
+                    password,
+                    firstName,
+                    lastName,
+                    phoneNumber
                 })
             });
     
@@ -53,6 +59,18 @@ function CreateAccount() {
                         </h1>
                         <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                             <div>
+                                <label htmlFor="first-name" className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">First Name</label>
+                                <input type="text" name="first-name" id="first-name" placeholder="First Name" className="bg-white border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+                            </div>
+                            <div>
+                                <label htmlFor="last-name" className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Last Name</label>
+                                <input type="text" name="last-name" id="last-name" placeholder="Last Name" className="bg-white border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                            </div>
+                            <div>
+                                <label htmlFor="phone-number" className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Phone Number</label>
+                                <input type="text" name="phone-number" id="phone-number" placeholder="Phone Number" className="bg-white border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required />
+                            </div>
+                            <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Your email</label>
                                 <input type="email" name="email" id="email" className="bg-white border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
                             </div>
@@ -83,4 +101,6 @@ function CreateAccount() {
         </section>
     );
 }
+
+
 export default CreateAccount;
