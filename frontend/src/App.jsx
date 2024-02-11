@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import './App.css';
+import UserInformation from "./pages/UserInformation";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<Navigate to="/home" />} />
         <Route path="home" element={<Home />}/>
         <Route path="search" element={<Search />}/>
+        <Route path="UserInformation" element={<UserInformation />}/>
       </Route>
     </Routes>
     </>
