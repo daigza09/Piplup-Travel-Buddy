@@ -57,7 +57,7 @@ function CreateAccount() {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-blue-500 md:text-2xl">
                             Create an account
                         </h1>
-                        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
+                        <form className="space-y-2 md:space-y-2" onSubmit={handleSubmit}>
                             <div>
                                 <label htmlFor="first-name" className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">First Name</label>
                                 <input type="text" name="first-name" id="first-name" placeholder="First Name" className="bg-white border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
