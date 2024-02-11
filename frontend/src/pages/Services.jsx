@@ -26,10 +26,10 @@ function Services() {
           Our chatbot allows you to find the flights you
         </p>
         <p>
-          want with ease - no more drop down menus and 
+          want with ease - just give us the vital information
         </p>
         <p>
-          manual input.
+          of your flight and we will figure out the rest.
         </p>
       </div>
     </div>
