@@ -6,7 +6,7 @@ import facebookLogo from "../assets/facebookWhite.png";
 
 function Footer() {
   return (
-    <footer className="bg-[#a8ebff] text-black font-semibold p-4 py-3" style = {{ height: '40px' }}>
+    <footer className="bg-[#000080] text-black font-semibold p-4 py-3" style = {{ height: '40px' }}>
       <div className="container mx-auto flex justify-between">
       <div className="flex items-start">
           <Link to="/instagram" className="social-link" style={{ marginRight: '15px' }}>
@@ -23,8 +23,8 @@ function Footer() {
           </Link>
         </div>
         <div className="flex">
-        <Link to="/help" className="help ml-3"><u>Help</u></Link>
-          <Link to="/contact" className="ml-3 contactUs"><u>Contact Us</u></Link>
+          <Link to="/help" className="help ml-3 text-white"><u>Help</u></Link>
+          <Link to="/contact" className="ml-3 contactUs text-white"><u>Contact Us</u></Link>
         </div>
       </div>
     </footer>
