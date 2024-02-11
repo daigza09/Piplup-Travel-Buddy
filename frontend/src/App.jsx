@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import './App.css';
 import Account from "./pages/Account";
+import CreateAccount from "./pages/CreateAccount"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="home" element={<Home />}/>
         <Route path="search" element={<Search />}/>
         <Route path="Account" element={<Account />}/>
+        <Route path="CreateAccount" element={<CreateAccount />} />
       </Route>
     </Routes>
     </>

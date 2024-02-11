@@ -18,7 +18,9 @@ function Account() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-200 to-gray-300">
+        <div
+            className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-200 to-gray-300"
+        >
             <div className="container mx-auto bg-white rounded-md shadow-lg p-8 max-w-md w-full md:w-2/3 lg:w-1/2" style={{ width: '90%', height: 'auto' }}>
                 <h2 className="text-2xl font-bold text-blue-500 mb-4">User Login</h2>
                 <form onSubmit={handleSubmit}>
@@ -55,7 +57,7 @@ function Account() {
                 </form>
                 <div className="mt-4 text-center">
                     <span className="text-sm text-gray-600">Don't have an account?</span>
-                    <Link to="/create-account" className="text-blue-500 hover:underline ml-1">Create Account</Link>
+                    <Link to="/CreateAccount" className="text-blue-500 hover:underline ml-1">Create Account</Link>
                 </div>
             </div>
         </div>
@@ -63,7 +65,6 @@ function Account() {
 }
 
 export default Account;
-
 
 
 
