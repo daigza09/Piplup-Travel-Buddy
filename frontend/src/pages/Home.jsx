@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import homeBG from "../assets/homeBG.jpg";
+import destinationBG from "../assets/destinationBG.jpg";
 
 function Home(){
     return (
-        <main className="relative h-screen bg-cover" style={{ backgroundImage: `url(${homeBG})` }}>
-          <div className="absolute inset-0 backdrop-blur-sm"></div>
-          <div className="container mx-auto text-center relative flex items-center justify-center h-full">
-            <div className="bg-white py-14 px-40 bg-opacity-70">
-              <h1 className="text-7xl font-bold text-[#05204A] mb-4">Piplup Travel Agent :3</h1>
-              <p className="text-xl text-[#05204A] mb-8">Testing Testing</p>
+        <main className="relative h-screen bg-cover flex items-center" style={{ backgroundImage: `url(${destinationBG})` }}>
+            <div className = "text-left custom-font">
+                <h1 className="text-5xl font-bold text-[#ffffff] mb-4 center">
+                    Travel the world with Piplup Luvers!
+                </h1>
+                <div className = "text-2xl text-[#ffffff] mb-2">
+                    We are dedicated to curating economical flight planners!
+                </div>
+                <button className="m-2 px-6 py-4 bg-[#000080] text-white rounded hover.bg-[#000080]">Learn More --</button>
             </div>
-          </div>
         </main>
       );
 }
