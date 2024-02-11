@@ -7,7 +7,7 @@ function About() {
   return (
     <main className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-200 to-gray-300">
       <div>
-        <div className="flex items-center justify-between p-4 ">
+        <div className="flex items-center justify-between mt-4">
           <div className="flex justify-between">
             <section className="container mx-auto">
             <h1 className="text-5xl font-bold">Who we are</h1>
