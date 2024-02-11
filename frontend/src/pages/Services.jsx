@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import chatBot from "../assets/chatbotIcon.png";
+import flightSearch from "../assets/flightSearch.png";
+import personIcon from "../assets/personIcon.png";
+import supportIcon from "../assets/supportIcon.png";
 
 function Services() {
   return (
@@ -10,15 +14,25 @@ function Services() {
       </section>
       <div className="flex justify-center">
   <section className="grid grid-cols-2 gap-48 mt-8">
-    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
-      <h1 className="text-xl font-bold text-center">AI Chatbot</h1>
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10 flex flex-col items-center">
+    <img
+        src={chatBot}
+        style={{width:'50px'}}
+        className="justify-center mb-2"
+        />
+      <h1 className="text-xl font-bold text-center">Chatbot</h1>
       <div className="flex">
         <p className="mt-4">
-          AI Chatbot stuff
+          Chatbot explanation
         </p>
       </div>
     </div>
-    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10 flex flex-col items-center">
+    <img
+        src={flightSearch}
+        style={{width:'50px'}}
+        className="justify-center mb-2"
+        />
       <h1 className="text-xl font-bold text-center">Flight Searching</h1>
       <div className="flex">
       <p className="mt-4">
@@ -26,7 +40,12 @@ function Services() {
         </p>
       </div>
     </div>
-    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10 mb-16 flex flex-col items-center">
+    <img
+        src={personIcon}
+        style={{width:'50px'}}
+        className="justify-center mb-2"
+        />
       <h1 className="text-xl font-bold text-center">A Personalised Experience</h1>
       <div className="flex">
         <p className="mt-4">
@@ -34,7 +53,12 @@ function Services() {
         </p>
       </div>
     </div>
-    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10 mb-16 flex flex-col items-center">
+    <img
+        src={supportIcon}
+        style={{width:'50px'}}
+        className="justify-center mb-2"
+        />
       <h1 className="text-xl font-bold text-center">Support</h1>
       <div className="flex">
         <p className="mt-4">
