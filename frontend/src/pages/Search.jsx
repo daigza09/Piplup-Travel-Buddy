@@ -207,22 +207,22 @@ function Search() {
                 </span>
               </div>
               <div className="mb-2">
-                <button id="search-button" class="w-100 btn btn-primary">
+                <button id="search-button" className="w-100 btn btn-primary">
                   Search
                 </button>
                 <div
-                  class="border-bottom mb-4 pt-4"
+                  className="border-bottom mb-4 pt-4"
                   id="search-results-separator"
                 ></div>
                 <div
-                  class="d-flex justify-content-center"
+                  className="d-flex justify-content-center"
                   id="search-results-loader"
                 >
-                  <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                  <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
                   </div>
                 </div>
-                <ul class="list-group mb-4" id="search-results"></ul>
+                <ul className="list-group mb-4" id="search-results"></ul>
               </div>
             </div>
           </div>
@@ -303,45 +303,46 @@ function Search() {
     if (results.length === 0) {
       searchResults.insertAdjacentHTML(
         "beforeend",
-        `<li class="list-group-item d-flex justify-content-center align-items-center" id="search-no-results">
+        `<li className="list-group-item d-flex justify-content-center align-items-center" id="search-no-results">
           No results
         </li>`
       );
+    } else {
+      console.log(results);
+      results.forEach(({ itineraries, price }) => {
+        const priceLabel = `${price.total} ${price.currency}`;
+        searchResults.insertAdjacentHTML(
+          "beforeend",
+          `<li className="flex-column flex-sm-row list-group-item d-flex justify-content-between align-items-sm-center">
+            ${itineraries
+              .map((itinerary, index) => {
+                const [, hours, minutes] =
+                  itinerary.duration.match(/(\d+)H(\d+)?/);
+                const travelPath = itinerary.segments
+                  .flatMap(({ arrival, departure }, index, segments) => {
+                    if (index === segments.length - 1) {
+                      return [departure.iataCode, arrival.iataCode];
+                    }
+                    return [departure.iataCode];
+                  })
+                  .join(" → ");
+                return `
+                <div className="flex-column flex-1 m-2 d-flex">
+                  <small className="text-muted">${
+                    index === 0 ? "Outbound" : "Return"
+                  }</small>
+                  <span className="fw-bold">${travelPath}</span>
+                  <div>${hours || 0}h ${minutes || 0}m</div>
+                </div>
+              `;
+              })
+              .join("")}
+            <span className="bg-primary rounded-pill m-2 badge fs-6">${priceLabel}</span>
+          </li>`
+        );
+      });
     }
   };
-
-  results.forEach(({ itineraries, price }) => {
-    const priceLabel = `${price.total} ${price.currency}`;
-    searchResults.insertAdjacentHTML(
-      "beforeend",
-      `<li class="flex-column flex-sm-row list-group-item d-flex justify-content-between align-items-sm-center">
-          ${itineraries
-            .map((itinerary, index) => {
-              const [, hours, minutes] =
-                itinerary.duration.match(/(\d+)H(\d+)?/);
-              const travelPath = itinerary.segments
-                .flatMap(({ arrival, departure }, index, segments) => {
-                  if (index === segments.length - 1) {
-                    return [departure.iataCode, arrival.iataCode];
-                  }
-                  return [departure.iataCode];
-                })
-                .join(" → ");
-              return `
-              <div class="flex-column flex-1 m-2 d-flex">
-                <small class="text-muted">${
-                  index === 0 ? "Outbound" : "Return"
-                }</small>
-                <span class="fw-bold">${travelPath}</span>
-                <div>${hours || 0}h ${minutes || 0}m</div>
-              </div>
-            `;
-            })
-            .join("")}
-          <span class="bg-primary rounded-pill m-2 badge fs-6">${priceLabel}</span>
-        </li>`
-    );
-  });
 
   document.body.addEventListener("input", () => {
     searchButton.disabled = !originInput.value || !destinationInput.value;
