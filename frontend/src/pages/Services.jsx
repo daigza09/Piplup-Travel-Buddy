@@ -21,9 +21,15 @@ function Services() {
         className="justify-center mb-3"
         />
       <h1 className="text-xl font-bold text-center">Chatbot</h1>
-      <div className="flex">
+      <div className="text-center">
         <p className="mt-4">
-          Chatbot explanation
+          Our chatbot allows you to find the flights you
+        </p>
+        <p>
+          want with ease - no more drop down menus and 
+        </p>
+        <p>
+          manual input.
         </p>
       </div>
     </div>
@@ -34,9 +40,15 @@ function Services() {
         className="justify-center mb-3"
         />
       <h1 className="text-xl font-bold text-center">Flight Searching</h1>
-      <div className="flex">
+      <div className="text-center">
       <p className="mt-4">
-        Flight searching explanation
+        We find you the best deals on flights, no matter
+        </p>
+        <p>
+          where you're flying. The Amadeus API allows us
+        </p>
+        <p>
+          to provide you with the information you need.
         </p>
       </div>
     </div>
@@ -46,10 +58,16 @@ function Services() {
         style={{width:'50px'}}
         className="justify-center mb-3"
         />
-      <h1 className="text-xl font-bold text-center">A Personalised Experience</h1>
-      <div className="flex">
+      <h1 className="text-xl font-bold text-center">A Personalized Experience</h1>
+      <div className="text-center">
         <p className="mt-4">
-          Personalised experience explanation
+          All of our users are offered a personal
+        </p>
+        <p>
+          experience through our account system.
+        </p>
+        <p>
+
         </p>
       </div>
     </div>
@@ -60,9 +78,18 @@ function Services() {
         className="justify-centers"
         />
       <h1 className="text-xl font-bold text-center">Support</h1>
-      <div className="flex">
+      <div className="text-center">
         <p className="mt-4">
-          Support Explanation
+          We strive to provide the utmost care and
+          </p>
+          <p>
+          support to our customers and users
+        </p>
+        <p>
+          and address any issues that may
+        </p>
+        <p>
+          arise.
         </p>
       </div>
     </div>

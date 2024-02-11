@@ -9,11 +9,11 @@ function Contact() {
       <section className="flex text-left">
         <div className="mx-auto mr-8">
           <h1 className="font-bold text-left text-4xl mb-8">Talk to Us</h1>
-          <p className="text-xl">
+          <p className="text-xl mr-8">
             Any questions, comments, or concerns can be answered in the boxes on
             the right.
           </p>
-          <p className="mb-8 text-xl">
+          <p className="mb-8 text-xl mr-8">
             A representative will speak to you as soon as possible. Our contact
             info is also below.
           </p>
