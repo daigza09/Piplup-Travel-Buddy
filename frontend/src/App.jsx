@@ -7,9 +7,9 @@ import Account from "./pages/Account";
 import CreateAccount from "./pages/CreateAccount";
 import LiveChat from "./pages/LiveChat";
 import UserInfo from "./pages/UserInformation";
+import Contact from "./pages/Contact";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-
 function App() {
   return (
     <>
