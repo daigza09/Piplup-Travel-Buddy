@@ -17,9 +17,6 @@ const amadeus = new Amadeus({
     clientSecret: process.env.API_SECRET,
   });
   //const port = 3000; we already port is 8080??
-
-
-
 // Middleware
 app.use(express.static("public"));
 
