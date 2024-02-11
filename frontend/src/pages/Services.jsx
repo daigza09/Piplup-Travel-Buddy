@@ -13,12 +13,12 @@ function Services() {
         </div>
       </section>
       <div className="flex justify-center">
-  <section className="grid grid-cols-2 gap-48 mt-8">
+  <section className="grid grid-cols-2 gap-36 mt-8">
     <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10 flex flex-col items-center">
     <img
         src={chatBot}
         style={{width:'50px'}}
-        className="justify-center mb-2"
+        className="justify-center mb-3"
         />
       <h1 className="text-xl font-bold text-center">Chatbot</h1>
       <div className="flex">
@@ -31,7 +31,7 @@ function Services() {
     <img
         src={flightSearch}
         style={{width:'50px'}}
-        className="justify-center mb-2"
+        className="justify-center mb-3"
         />
       <h1 className="text-xl font-bold text-center">Flight Searching</h1>
       <div className="flex">
@@ -44,7 +44,7 @@ function Services() {
     <img
         src={personIcon}
         style={{width:'50px'}}
-        className="justify-center mb-2"
+        className="justify-center mb-3"
         />
       <h1 className="text-xl font-bold text-center">A Personalised Experience</h1>
       <div className="flex">
@@ -57,7 +57,7 @@ function Services() {
     <img
         src={supportIcon}
         style={{width:'50px'}}
-        className="justify-center mb-2"
+        className="justify-centers"
         />
       <h1 className="text-xl font-bold text-center">Support</h1>
       <div className="flex">
