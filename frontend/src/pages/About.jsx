@@ -7,18 +7,20 @@ function About() {
   return (
     <main className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-200 to-gray-300">
       <div>
-        <div className="flex items-center justify-between p-4 ">
+        <div className="flex items-center justify-between mt-4">
           <div className="flex justify-between">
             <section className="container mx-auto">
-              <h1 className="text-5xl font-bold">Who we are</h1>
-              <p className="text-base mt-8">
-                At Piplup Luvers, we are committed to providing safe, reliable,
-                and comfortable air travel experiences for our passengers.
-              </p>
-              <p className="text-base">
-                Our mission is to connect people, places, and cultures through
-                seamless and enjoyable flights.
-              </p>
+            <h1 className="text-5xl font-bold">Who we are</h1>
+<p className="text-base mt-8">
+  Welcome to Piplup Luvers – your gateway to delightful and secure air travel experiences. We take pride in offering passengers 
+</p>
+<p className="text-base">
+a seamless journey marked by safety, reliability, and comfort. Our commitment goes beyond flights; it extends to connecting 
+</p>
+<p className="text-base">
+people, places, and cultures. At Piplup Luvers, we believe in fostering memorable experiences that transcend the bounds of traditional air travel.
+</p>
+
             </section>
           </div>
         </div>
@@ -74,8 +76,16 @@ function About() {
           <section className="container mx-auto mb-16">
             <h1 className="text-5xl font-bold mt-16">Team Behind the Code</h1>
             <p className="text-base mr-16 mt-8">
-              A dedicated team of coders consisting of Daisy, Lisa, Reem, and
-              Colin. All of us are computer science majors
+            The Piplup Luvers team is composed of a dedicated group of 
+            coders, including Daisy, Lisa, Reem, and Colin. All team
+            </p>
+            <p>
+            members are passionate computer science majors, bringing their
+            unique skills and expertise to ensure the success and innovation 
+            </p>
+            <p>
+            of our projects. Together, we collaborate seamlessly to deliver 
+            cutting-edge solutions and contribute to the continued growth and excellence of our endeavors.
             </p>
           </section>
         </div>

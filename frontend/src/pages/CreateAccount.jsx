@@ -53,11 +53,11 @@ function CreateAccount() {
         <section className="bg-gradient-to-b from-white via-blue-200 to-gray-300">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <div className="w-full bg-white rounded-lg shadow-md dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-                    <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <div className="p-6 sm:p-2">
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-blue-500 md:text-2xl">
                             Create an account
                         </h1>
-                        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
+                        <form className="space-y-2 md:space-y-2" onSubmit={handleSubmit}>
                             <div>
                                 <label htmlFor="first-name" className="block mb-2 text-sm font-medium text-gray-700 dark:text-white">First Name</label>
                                 <input type="text" name="first-name" id="first-name" placeholder="First Name" className="bg-white border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />

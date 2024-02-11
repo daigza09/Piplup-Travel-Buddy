@@ -1,35 +1,52 @@
 import { Link } from "react-router-dom";
 import locationPin from "../assets/locationPin.png";
 import bluePhone from "../assets/bluePhone.png";
+import blueMail from "../assets/blueMail.png";
 
 function Contact() {
   return (
     <main className="flex min-h-screen bg-gradient-to-b from-white via-blue-200 to-gray-300 justify-center items-center">
       <section className="flex text-left">
-        <div className="mx-auto mr-8">
-          <h1 className="font-bold text-left text-4xl mb-8">Talk to Us</h1>
-          <p className="text-xl">
+        <div className="mx-auto mr-4">
+          <h1 className="font-bold text-left text-4xl ml-4 mb-8">Talk to Us</h1>
+          <p className="text-xl ml-4 mr-4">
             Any questions, comments, or concerns can be answered in the boxes on
-            the right. A repre-
+            the right.
           </p>
-          <p className="mb-8 text-xl">
-            sentative will speak to you as soon as possible. Our contact info is
-            also below.
+          <p className="mb-8 text-xl ml-4 mr-8">
+            A representative will speak to you as soon as possible. Our contact
+            info is also below.
           </p>
           <div className="flex">
             <img
               src={locationPin}
               style={{ width: "20px" }}
-              className="mr-4"
+              className="ml-4 mr-4"
             ></img>
             <p className="text-lg font-bold">
               132, My Street, Kingston, New York 12401
             </p>
           </div>
+          <div className="flex mt-4">
+            <img
+              src={bluePhone}
+              style={{ width: "25px" }}
+              className="ml-4 mr-4"
+            ></img>
+            <p className="text-lg font-bold">123-456-7890</p>
+          </div>
+          <div className="flex mt-4">
+            <img
+              src={blueMail}
+              style={{ width: "25px" }}
+              className="ml-4 mr-4"
+            ></img>
+            <p className="text-lg font-bold">firstlastname@somewebsite.com</p>
+          </div>
           <div className="flex"></div>
         </div>
-        <div>
-          <section className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-8">
+        <div className="flex items-center justify-center">
+          <section className="bg-[#ffffff] mx-auto container bg-white rounded-md shadow-lg p-8">
             <div className="flex w-full">
               <div className="flex flex-col w-1/2 mr-4">
                 <input
