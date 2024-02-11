@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import locationPin from "../assets/locationPin.png";
 import bluePhone from "../assets/bluePhone.png";
+import blueMail from "../assets/blueMail.png";
 
 function Contact() {
   return (
@@ -10,11 +11,11 @@ function Contact() {
           <h1 className="font-bold text-left text-4xl mb-8">Talk to Us</h1>
           <p className="text-xl">
             Any questions, comments, or concerns can be answered in the boxes on
-            the right. A repre-
+            the right.
           </p>
           <p className="mb-8 text-xl">
-            sentative will speak to you as soon as possible. Our contact info is
-            also below.
+            A representative will speak to you as soon as possible. Our contact
+            info is also below.
           </p>
           <div className="flex">
             <img
@@ -25,6 +26,22 @@ function Contact() {
             <p className="text-lg font-bold">
               132, My Street, Kingston, New York 12401
             </p>
+          </div>
+          <div className="flex mt-4">
+            <img
+              src={bluePhone}
+              style={{ width: "25px" }}
+              className="mr-4"
+            ></img>
+            <p className="text-lg font-bold">123-456-7890</p>
+          </div>
+          <div className="flex mt-4">
+            <img
+              src={blueMail}
+              style={{ width: "25px" }}
+              className="mr-4"
+            ></img>
+            <p className="text-lg font-bold">firstlastname@somewebsite.com</p>
           </div>
           <div className="flex"></div>
         </div>
