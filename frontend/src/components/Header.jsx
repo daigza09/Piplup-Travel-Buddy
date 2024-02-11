@@ -11,6 +11,7 @@ function Header() {
                 <Link to="/About" className="hover:text-blue-400">About</Link>
                 <Link to="/LiveChat" className="hover:text-blue-400">Live Chat</Link>
                 <Link to="/Contact" className="hover:text-blue-400">Contact</Link>
+                <Link to="/Search" className="hover:text-blue-400">Search</Link>
             </div>
         </header>
     );
