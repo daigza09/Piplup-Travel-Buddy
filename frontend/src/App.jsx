@@ -5,6 +5,8 @@ import Search from "./pages/Search";
 import About from "./pages/About";
 
 import './App.css';
+import Account from "./pages/Account";
+import CreateAccount from "./pages/CreateAccount"
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route index element={<Navigate to="/home" />} />
         <Route path="home" element={<Home />}/>
         <Route path="search" element={<Search />}/>
+        <Route path="Account" element={<Account />}/>
+        <Route path="CreateAccount" element={<CreateAccount />} />
         <Route path="about" element={<About />}/>
       </Route>
     </Routes>

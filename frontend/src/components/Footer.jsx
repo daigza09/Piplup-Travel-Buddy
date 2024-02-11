@@ -23,7 +23,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex">
-        <Link to="/help" className="help ml-3 text-white"><u>Help</u></Link>
+          <Link to="/help" className="help ml-3 text-white"><u>Help</u></Link>
           <Link to="/contact" className="ml-3 contactUs text-white"><u>Contact Us</u></Link>
         </div>
       </div>
