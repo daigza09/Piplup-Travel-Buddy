@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import UserInfo from "./pages/UserInformation";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Navigate to="/home" />} />
           <Route path="home" element={<Home />} />
           <Route path="search" element={<Search />} />
+          <Route path="UserInformation" element={<UserInfo />} />
         </Route>
       </Routes>
     </>
