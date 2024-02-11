@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
@@ -7,13 +7,11 @@ import Account from "./pages/Account";
 import CreateAccount from "./pages/CreateAccount";
 import LiveChat from "./pages/LiveChat";
 import UserInfo from "./pages/UserInformation";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
 function App() {
   return (
     <>
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/home" />} />
@@ -26,7 +24,6 @@ function App() {
           <Route path="UserInformation" element={<UserInfo />} />
         </Route>
       </Routes>
-    </BrowserRouter>
     </>
   );
 }
