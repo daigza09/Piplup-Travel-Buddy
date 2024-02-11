@@ -23,11 +23,18 @@ function CreateAccount() {
                     password
                 })
             });
-
+    
             if (response.ok) {
                 const data = await response.json();
                 console.log(data); // Log the response from the server
-                // Optionally, redirect the user to a different page
+    
+                // Handle the response data accordingly
+                if (data.user) {
+                    // Optionally, redirect the user to a different page or display a success message
+                    console.log("User created successfully:", data.user);
+                } else {
+                    console.error("Failed to get user data from response");
+                }
             } else {
                 console.error("Failed to register");
             }
