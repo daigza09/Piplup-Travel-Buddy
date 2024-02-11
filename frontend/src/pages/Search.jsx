@@ -3,7 +3,7 @@ import homeBG from "../assets/homeBG.jpg";
 import "./Search.css";
 
 function Search() {
-  const dataDestination = ["Houston", "Austin", "Dallas"];
+  const dataDeparture = ["Houston", "Austin", "Dallas"];
   const dataArrival = ["Washington", "california", "kentucky"];
 
   return (
@@ -20,19 +20,27 @@ function Search() {
           <p className="text-xl text-[#05204A] mb-8">Let us help!</p>
 
           <div className="main">
-            <input list="destinationList" placeholder="Destination" />
-            <datalist id="destinationList">
-              {dataDestination.map((op) => (
-                <option key={op}>{op}</option>
-              ))}
-            </datalist>
+            <div id="departure">
+              <input list="departureList" placeholder="Departure" />
+              <datalist id="departureList">
+                {dataDeparture.map((op) => (
+                  <option key={op}>{op}</option>
+                ))}
+              </datalist>
+            </div>
 
-            <input list="arrivalList" placeholder="Arrival" />
-            <datalist id="arrivalList">
-              {dataArrival.map((op) => (
-                <option key={op}>{op}</option>
-              ))}
-            </datalist>
+            <div id="arrival">
+              <input list="arrivalList" placeholder="Arrival" />
+              <datalist id="arrivalList">
+                {dataArrival.map((op) => (
+                  <option key={op}>{op}</option>
+                ))}
+              </datalist>
+              <label for="datepicker">Arrival Date:</label>
+              <input type="date" id="datepicker" name="datepicker"></input>
+              <label for="datepicker">Departure Date:</label>
+              <input type="date" id="datepicker" name="datepicker"></input>
+            </div>
           </div>
         </div>
       </div>

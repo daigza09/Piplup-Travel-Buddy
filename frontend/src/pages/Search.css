@@ -1,5 +1,7 @@
 .main {
     margin-top: 5%;
+    display: flex; /* Add flexbox display to make the inputs horizontal */
+    justify-content: space-between; /* Add space between the input boxes */
 }
 
 input {
