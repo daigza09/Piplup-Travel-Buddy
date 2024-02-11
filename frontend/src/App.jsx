@@ -10,7 +10,6 @@ import Contact from "./pages/Contact";
 import UserInformation from "./pages/UserInformation";
 import Services from "./pages/Services";
 import "./App.css";
-
 function App() {
   return (
     <>
@@ -31,5 +30,4 @@ function App() {
     </>
   );
 }
-
 export default App;
