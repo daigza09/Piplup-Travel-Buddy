@@ -7,8 +7,10 @@ import Account from "./pages/Account";
 import CreateAccount from "./pages/CreateAccount";
 import LiveChat from "./pages/LiveChat";
 import Contact from "./pages/Contact";
+import UserInformation from "./pages/UserInformation";
 import Services from "./pages/Services";
 import "./App.css";
+
 function App() {
   return (
     <>
@@ -21,7 +23,8 @@ function App() {
           <Route path="CreateAccount" element={<CreateAccount />} />
           <Route path="about" element={<About />} />
           <Route path="LiveChat" element={<LiveChat />} />
-          <Route path="Contact" element={<Contact />} />
+          <Route path="Contact" element={<Contact/>}/>
+          <Route path="UserInformation" element={<UserInformation />} />
           <Route path="Services" element={<Services />} />
         </Route>
       </Routes>

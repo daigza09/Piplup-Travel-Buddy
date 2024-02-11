@@ -1,7 +1,7 @@
 import { useState } from "react";
 import destinationBG from "../assets/destinationBG.jpg";
 
-function UserInfo() {
+function UserInformation() {
   // Define state variables for user data and edit mode
   const [userData, setUserData] = useState({
     name: "",
