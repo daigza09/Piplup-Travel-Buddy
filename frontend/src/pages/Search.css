@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .main {
     margin-top: 5%;
     display: flex; /* Add flexbox display to make the inputs horizontal */
     justify-content: space-between; /* Add space between the input boxes */
     gap: 10px;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -10,4 +13,5 @@ input {
     flex: 1;
     margin-right: 5px;
     gap: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
