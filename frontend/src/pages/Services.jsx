@@ -8,24 +8,42 @@ function Services() {
           <h1>Services we Provide</h1>
         </div>
       </section>
+      <div className="flex justify-center">
+  <section className="grid grid-cols-2 gap-48 mt-8">
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
+      <h1 className="text-xl font-bold text-center">AI Chatbot</h1>
       <div className="flex">
-        <section className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-8">
-          <div>
-            <h1>Chatbot</h1>
-          </div>
-          <div className="mt-8">
-            <h1>Something else</h1>
-          </div>
-        </section>
-        <section className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-8">
-          <div>
-            <h1>Chatbot</h1>
-          </div>
-          <div className="mt-8">
-            <h1>Something else</h1>
-          </div>
-        </section>
+        <p className="mt-4">
+          AI Chatbot stuff
+        </p>
       </div>
+    </div>
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
+      <h1 className="text-xl font-bold text-center">Flight Searching</h1>
+      <div className="flex">
+      <p className="mt-4">
+        Flight searching explanation
+        </p>
+      </div>
+    </div>
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
+      <h1 className="text-xl font-bold text-center">A Personalised Experience</h1>
+      <div className="flex">
+        <p className="mt-4">
+          Personalised experience explanation
+        </p>
+      </div>
+    </div>
+    <div className="bg-[#ffffff] container bg-white rounded-md shadow-lg p-10">
+      <h1 className="text-xl font-bold text-center">Support</h1>
+      <div className="flex">
+        <p className="mt-4">
+          Support Explanation
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
     </main>
   );
 }
