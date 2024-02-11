@@ -1,7 +1,8 @@
 // Import required modules
 const express = require("express");
+const router = express.Router();
 const Amadeus = require('amadeus');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
@@ -16,7 +17,7 @@ const amadeus = new Amadeus({
     clientId: process.env.API_KEY,
     clientSecret: process.env.API_SECRET,
   });
-  //const port = 3000; we already port is 8080??
+  const port = 3000;
 // Middleware
 app.use(express.static("public"));
 
@@ -62,24 +63,28 @@ app.get("/api/search", async (request, response) => {
 
 
 // Connect to MongoDB database
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => {
-    console.log('Connected to MongoDB');
-})
-.catch((error) => {
-    console.error('Error connecting to MongoDB:', error);
-    process.exit(1); // Exit the application if unable to connect to the database
-});
+// mongoose.connect(process.env.MONGO_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// })
+// .then(() => {
+//     console.log('Connected to MongoDB');
+// })
+// .catch((error) => {
+//     console.error('Error connecting to MongoDB:', error);
+//     process.exit(1); // Exit the application if unable to connect to the database
+// });
 
 // Routes
 app.use('/api/users', userRoutes); // Mount user routes
 
 // Start the server
-const PORT = process.env.PORT || 8080; // Use the provided port or default to 8080
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
+
+// const PORT = process.env.PORT || 8080; // Use the provided port or default to 8080
+// app.listen(PORT, () => {
+//     console.log(`Server is running on port ${PORT}`);
+// });
 
