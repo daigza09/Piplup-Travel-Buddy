@@ -1,6 +1,9 @@
 import React from "react";
 import homeBG from "../assets/homeBG.jpg";
 import "./Search.css";
+import React from "react";
+import homeBG from "../assets/homeBG.jpg";
+import "./Search.css";
 
 function Search() {
   const dataDeparture = ["Houston", "Austin", "Dallas"];
