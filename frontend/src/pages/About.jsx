@@ -1,5 +1,5 @@
 import React from "react";
-import homeBG from "../assets/homeBG.jpg";
+import destinationBG from "../assets/destinationBG.jpg";
 import "./Search.css";
 
 function Search() {
@@ -9,7 +9,7 @@ function Search() {
   return (
     <main
       className="relative h-screen bg-cover"
-      style={{ backgroundImage: `url(${homeBG})` }}
+      style={{ backgroundImage: `url(${destinationBG})` }}
     >
       <div className="absolute inset-0 backdrop-blur-sm"></div>
       <div className="container mx-auto text-center relative flex items-center justify-center h-full">
